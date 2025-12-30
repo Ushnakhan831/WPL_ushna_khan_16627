@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PhotoGram Signup</title>
+<style>
+body{font-family:Arial;background:#fff0f5}
+.card{width:350px;margin:50px auto;background:white;padding:20px}
+button{background:#e84393;color:white;border:none;width:100%;padding:8px}
+input{width:100%;padding:8px;margin:6px 0}
+</style>
+<script>
+function check(){
+    if(document.forms[0].fname.value==""){
+        alert("First name required");
+        return false;
+    }
+}
+</script>
+</head>
+<body>
+
+<div class="card">
+<h2>PhotoGram</h2>
+<form action="submit.php" method="post" onsubmit="return check()">
+<input type="hidden" name="platform" value="PhotoGram">
+<input name="fname" placeholder="First Name">
+<input name="lname" placeholder="Last Name">
+<input type="email" name="email" placeholder="Email">
+<input type="password" name="password" placeholder="Password">
+<select name="gender">
+<option>Male</option>
+<option>Female</option>
+</select>
+<button>Signup</button>
+</form>
+</div>
+
+</body>
+</html>

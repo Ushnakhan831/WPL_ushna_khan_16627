@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ChatUp Signup</title>
+<style>
+body{font-family:Arial;background:#f0fff0}
+.box{width:350px;margin:50px auto;background:white;padding:20px}
+input,select,button{width:100%;padding:8px;margin:6px 0}
+button{background:#00b894;color:white;border:none}
+</style>
+<script>
+function valid(){
+    let e=document.forms[0].email.value;
+    if(!e.includes("@")){
+        alert("Invalid Email");
+        return false;
+    }
+}
+</script>
+</head>
+<body>
+
+<div class="box">
+<h2>ChatUp</h2>
+<form method="post" action="submit.php" onsubmit="return valid()">
+<input type="hidden" name="platform" value="ChatUp">
+<input name="fname" placeholder="First Name">
+<input name="lname" placeholder="Last Name">
+<input name="email" placeholder="Email">
+<input type="password" name="password" placeholder="Password">
+<select name="gender">
+<option>Male</option>
+<option>Female</option>
+</select>
+<button>Create Account</button>
+</form>
+</div>
+
+</body>
+</html>

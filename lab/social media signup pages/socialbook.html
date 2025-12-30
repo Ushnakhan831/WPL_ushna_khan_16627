@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SocialBook Signup</title>
+<style>
+body{font-family:Arial;background:#e9f0fb}
+.box{width:350px;margin:50px auto;background:white;padding:20px}
+input,button{width:100%;padding:8px;margin:6px 0}
+button{background:#1877f2;color:white;border:none}
+</style>
+<script>
+function validate(){
+    let email=document.forms[0].email.value;
+    let pass=document.forms[0].password.value;
+    if(email=="" || pass.length<6){
+        alert("Invalid Data");
+        return false;
+    }
+}
+</script>
+</head>
+<body>
+
+<div class="box">
+<h2>SocialBook</h2>
+<form method="post" action="submit.php" onsubmit="return validate()">
+<input type="hidden" name="platform" value="SocialBook">
+<input type="text" name="fname" placeholder="First Name" required>
+<input type="text" name="lname" placeholder="Last Name" required>
+<input type="email" name="email" placeholder="Email" required>
+<input type="password" name="password" placeholder="Password (min 6)" required>
+<input type="radio" name="gender" value="Male"> Male
+<input type="radio" name="gender" value="Female"> Female
+<button>Signup</button>
+</form>
+</div>
+
+</body>
+</html>
